@@ -1,9 +1,6 @@
 //import the logo
 import logo from "./logo.png";
 
-
-
-
 //nav main container
 const NavBar = () => {
   return (
