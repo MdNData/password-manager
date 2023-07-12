@@ -1,18 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
-import "./styles/index.css";
-import { Header } from "./components/Header";
-import { PasswordLists } from "./components/PasswordList";
+import "./styles/style.css";
+import { Loader } from "./components/global/Loader/Loader";
+import { NavigationBar } from "./components/global/NavigationBar/NavigationBar";
 
-//Main component for all the page
 const App = () => {
+  //state for the loading of the website
+  const [isLoading, setIsLoading] = useState(true);
+
+  //check if the website is loaded entirely
+  window.onload = () => {
+    setIsLoading(false);
+  };
+
   return (
     <React.Fragment>
-      <Header
-        mainTitle="Password Manager"
-        secondTitle="Online, Secure and Free"
-      />
-      <PasswordLists />
+      {/* Start the loading animation */}
+      {isLoading && <Loader />}
+
+      {/* Main Website */}
+      <NavigationBar />
+
     </React.Fragment>
   );
 };
