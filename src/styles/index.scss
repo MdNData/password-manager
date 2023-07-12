@@ -11,16 +11,25 @@ body {
   header {
     text-align: center;
     h1 {
-        font-family: "Archivo Black";
+      font-family: "Archivo Black";
+      color: white;
+      margin: 0 15px;
+      margin-top: 20px;
+      font-size: 40px;
     }
     h2 {
-        font-family: Lobster;
+      font-family: Lobster;
+      color: white;
+      margin: 0 15px;
+      margin-top: 5px;
+      font-weight: 100;
+      font-size: 35px;
     }
   }
 
   article {
     padding: 10px;
-    background-color: rgba(20, 145, 253, 0.423);
+    background-color: rgba(85, 176, 255, 0.903);
     margin: 30px;
     border-radius: 12px;
     display: flex;
