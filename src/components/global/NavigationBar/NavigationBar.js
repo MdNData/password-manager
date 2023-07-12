@@ -1,5 +1,5 @@
 //import the logo
-import logo from "../../../imgs/logo.png";
+import logo from "./logo.png";
 
 
 
