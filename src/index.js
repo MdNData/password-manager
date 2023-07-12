@@ -16,9 +16,14 @@ const App = () => {
       }
     };
 
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
     window.addEventListener("load", handleWindowLoad);
 
     return () => {
+      clearTimeout(timer);
       window.removeEventListener("load", handleWindowLoad);
     };
   }, []);
