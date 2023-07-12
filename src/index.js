@@ -18,7 +18,7 @@ const App = () => {
 
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1500);
 
     window.addEventListener("load", handleWindowLoad);
 
