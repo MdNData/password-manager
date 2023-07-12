@@ -9,9 +9,17 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   //check if the website is loaded entirely
-  window.onload = () => {
-    setIsLoading(false);
-  };
+  useEffect(() => {
+    const handleWindowLoad = () => {
+      setIsLoading(false);
+    };
+
+    window.addEventListener("load", handleWindowLoad);
+
+    return () => {
+      window.removeEventListener("load", handleWindowLoad);
+    };
+  }, []);
 
   return (
     <React.Fragment>
