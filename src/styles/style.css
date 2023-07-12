@@ -49,4 +49,17 @@ nav div.nav-logo a h2 {
 
 main {
   padding-top: 65px;
+}
+
+.password-container {
+  padding: 20px;
+}
+.password-container article {
+  background-color: #0e1326;
+  min-width: 300px;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 8px;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
