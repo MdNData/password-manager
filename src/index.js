@@ -11,19 +11,12 @@ const App = () => {
   //check if the website is loaded entirely
   useEffect(() => {
     const handleWindowLoad = () => {
-      if (document.readyState === "complete") {
-        setIsLoading(false);
-      }
-    };
-
-    const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1500);
+    };
 
     window.addEventListener("load", handleWindowLoad);
 
     return () => {
-      clearTimeout(timer);
       window.removeEventListener("load", handleWindowLoad);
     };
   }, []);
