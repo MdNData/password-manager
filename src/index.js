@@ -11,7 +11,9 @@ const App = () => {
   //check if the website is loaded entirely
   useEffect(() => {
     const handleWindowLoad = () => {
-      setIsLoading(false);
+      if (document.readyState === "complete") {
+        setIsLoading(false);
+      }
     };
 
     window.addEventListener("load", handleWindowLoad);
@@ -28,7 +30,6 @@ const App = () => {
 
       {/* Main Website */}
       <NavigationBar />
-
     </React.Fragment>
   );
 };
