@@ -116,7 +116,7 @@ main {
   padding: 15px;
   border-radius: 8px;
   color: white;
-  height: 300px;
+  height: 400px;
   transition: all 200ms linear;
 }
 .password-container .newPasswordVisible .identifier {
