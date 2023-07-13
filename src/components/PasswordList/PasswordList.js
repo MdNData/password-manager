@@ -20,7 +20,8 @@ export const PasswordList = () => {
           "https://password-manager-api.azurewebsites.net/testing/getall"
         );
         const data = await response.json();
-        setJsonData(data);
+        const reversedData = data.reverse();
+        setJsonData(reversedData);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -36,7 +37,9 @@ export const PasswordList = () => {
   //function to diplsy or not the add new password element
   const displayIt = () => {
     setHiddenOrNot((prevHiddenOrNot) =>
-      prevHiddenOrNot === "newPasswordVisible" ? "newPasswordHidden" : "newPasswordVisible"
+      prevHiddenOrNot === "newPasswordVisible"
+        ? "newPasswordHidden"
+        : "newPasswordVisible"
     );
     setAddRemoveText((prevAddOrNot) =>
       prevAddOrNot == "+ Add New Entry" ? "Never Mind" : "+ Add New Entry"
