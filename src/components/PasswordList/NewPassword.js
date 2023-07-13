@@ -47,9 +47,6 @@ export const NewPassword = ({ className }) => {
       requestInfo
     )
       .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      })
       .catch((error) => {
         
       });
