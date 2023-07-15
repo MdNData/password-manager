@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import { PasswordList } from "./PasswordList";
 
-export const NewPassword = ({ className }) => {
+export const NewPassword = ({ className, setClassName, addRemove }) => {
   const [srcImg, setSrcImg] = useState(
     "https://mdndata.github.io/password-manager/static/media/logo.b8ce593d759382a06a27.png"
   );
@@ -28,6 +29,7 @@ export const NewPassword = ({ className }) => {
   };
 
   const registerEntry = () => {
+    
     var payload = {
       email: "testing",
       imgsrc: srcImg,
@@ -46,10 +48,12 @@ export const NewPassword = ({ className }) => {
       "https://password-manager-api.azurewebsites.net/testing/entry",
       requestInfo
     )
-      .then((response) => response.json())
-      .catch((error) => {
-        
-      });
+      .then((response) => {
+        setClassName("newPasswordHidden");
+        addRemove("+ Add New Entry");
+      })
+
+      .catch((error) => {});
   };
 
   return (

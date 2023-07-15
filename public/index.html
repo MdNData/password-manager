@@ -85,7 +85,7 @@
     <div id="root">
     </div>
     <script>
-      const container = createElement("div");
+      
       //Create and return an HTML element 
       function createElement(elementType){
           return document.createElement(elementType);
@@ -96,19 +96,9 @@
           parent.appendChild(child);
       }
 
-      //Add child as first element 
-      function addChildAsFirstToParent(child, parent){
-          parent.prepend(child);
-      }
-
       //Change the Text of an element 
       function changeText(element, text){
           element.innerText = text;
-      }
-
-      //Change HTML of an element
-      function changeHtml(element, html){
-          element.innerHTML = html;
       }
 
       //Change the classes
@@ -116,6 +106,7 @@
           element.className = item;
       }
 
+      const container = createElement("div");
       function loading(){
           changeClass(container, "loading");
           addChildToParent(container, document.body);
