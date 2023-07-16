@@ -12,6 +12,8 @@ export const NewPassword = ({ className, setClassName, addRemove }) => {
 
   const [pass, setPass] = useState("");
 
+  const [sendText, setSendText] = useState("Save");
+
   const updateSrcImg = (e) => {
     setSrcImg(e.target.value);
   };
@@ -29,7 +31,8 @@ export const NewPassword = ({ className, setClassName, addRemove }) => {
   };
 
   const registerEntry = () => {
-    
+    setSendText("Saving . . .");
+
     var payload = {
       email: "testing",
       imgsrc: srcImg,
@@ -51,6 +54,8 @@ export const NewPassword = ({ className, setClassName, addRemove }) => {
       .then((response) => {
         setClassName("newPasswordHidden");
         addRemove("+ Add New Entry");
+        //reload the page
+        window.location = "/password-manager/";
       })
 
       .catch((error) => {});
@@ -84,7 +89,7 @@ export const NewPassword = ({ className, setClassName, addRemove }) => {
           <input type="text" placeholder="new entry" onChange={updatePass} />
         </p>
         <div>
-          <button onClick={registerEntry}>Save</button>
+          <button onClick={registerEntry}>{sendText}</button>
         </div>
       </div>
     </article>

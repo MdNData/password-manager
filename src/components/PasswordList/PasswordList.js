@@ -75,6 +75,7 @@ export const PasswordList = () => {
         className={hiddenOrNot}
         setClassName={setHiddenOrNot}
         addRemove={setAddRemoveText}
+        reload={jsonData}
       />
 
       {listData.map((item, key) => {
