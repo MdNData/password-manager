@@ -30,6 +30,16 @@ export const PasswordList = () => {
         const data = await response.json();
         //invert them to be desplayed from new to old
         const reversedData = data.reverse();
+        // const jsonDataString = JSON.stringify(reversedData);
+        // const blob = new Blob([jsonDataString], { type: "application/json" });
+
+        // const url = URL.createObjectURL(blob);
+        // const a = document.createElement("a");
+        // a.href = url;
+        // a.download = "data.json"; // Specify the filename with .json extension
+        // document.body.appendChild(a);
+        // a.click();
+        // document.body.removeChild(a);
         //save them on the container
         setJsonData(reversedData);
         //if errors appear
